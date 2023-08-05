@@ -3,12 +3,16 @@ const colors = ["red", "green", "blue", "yellow", "orange", "purple", "pink", "b
 
 for (let i = 0; i < 16; i++) {
     for (let j = 0; j < 16; j++) {   
-    
         const box = document.createElement('div');
         box.classList.add('boxes');    
-//        box.style.backgroundColor = colors[(i * 16 + j) % colors.length];
         gridBox.appendChild(box);
+        
+        gridBox.addEventListener('click', ()=> {
+            box.addEventListener('mousemove', () => {
+                box.style.backgroundColor = 'red';
+            })            
+        })
     }       
 }
 
-console.dir(gridBox);
+// box.style.backgroundColor = colors[(i * 16 + j) % colors.length];
