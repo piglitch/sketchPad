@@ -1,18 +1,26 @@
 const gridBox = document.querySelector('.grid-container');
-const colors = ["red", "green", "blue", "yellow", "orange", "purple", "pink", "brown", "cyan", "magenta", "teal", "lime", "indigo", "silver", "gold", "maroon"];
+//const colors = ["red", "green", "blue", "yellow", "orange", "purple", "pink", "brown", "cyan", "magenta", "teal", "lime", "indigo", "silver", "gold", "maroon"];
 
-for (let i = 0; i < 16; i++) {
-    for (let j = 0; j < 16; j++) {   
+let isColorChangeEnabled = false;
+
+for (let i = 0; i < 110; i++) {
+    for (let j = 0; j < 60; j++) {   
         const box = document.createElement('div');
         box.classList.add('boxes');    
         gridBox.appendChild(box);
+
+        box.addEventListener('click', ()=> {                    
+            isColorChangeEnabled = !isColorChangeEnabled;                    
+        }); 
         
-        gridBox.addEventListener('click', ()=> {
-            box.addEventListener('mousemove', () => {
-                box.style.backgroundColor = 'red';
-            })            
-        })
-    }       
+        const draw = () => {           
+            box.addEventListener('mousemove', ()=>{
+                if(isColorChangeEnabled){
+                    box.style.backgroundColor = 'red';
+            }});
+        }; 
+        draw();
+    };       
 }
 
-// box.style.backgroundColor = colors[(i * 16 + j) % colors.length];
+
