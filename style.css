@@ -10,13 +10,12 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-top: 170px;
-    width: 600px;
+    width: 800px;
+    border: 5px solid rgb(68, 255, 68);
 }
 
 .boxes{
-    padding: 15px;
-    height: 5px;
-    width: 5px;
-    background: rgb(250, 222, 240);
-    border: 1px solid rgb(0, 0, 0);
-}
+    padding: 4px;
+    background: white;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray; }
