@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(186, 187, 132);
+    background-color: rgb(88, 88, 86);
 }
 
 .grid-container{
@@ -11,7 +11,6 @@ body{
     margin-right: auto;
     margin-top: 170px;
     width: 800px;
-    border: 5px solid rgb(68, 255, 68);
 }
 
 .boxes{
@@ -19,3 +18,14 @@ body{
     background: white;
     border-bottom: 1px solid lightgray;
     border-right: 1px solid lightgray; }
+
+.btn{
+    padding: 4px; 
+    color: rgb(225, 238, 38); 
+    background: none; 
+    border: 2px solid yellow; 
+    cursor: pointer;
+}    
+.btn:active{
+    transform: scale(.95);
+}
